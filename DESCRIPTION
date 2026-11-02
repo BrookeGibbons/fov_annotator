@@ -1,0 +1,35 @@
+Package: fovannotator
+Type: Package
+Title: Field-of-View Annotation for Baited Remote Underwater Video
+Version: 0.1.0
+Authors@R:
+    person("Brooke", "Gibbons", email = "brooke.gibbons@marineecology.io",
+           role = c("aut", "cre"))
+Description: A 'shiny' application for measuring field-of-view covariates on
+    still frames from baited remote underwater video stations (BRUVS): the
+    percentage of the view that is open water column, seabed, or blocked by
+    nearby structure, after excluding the bait arm and bag. Frames are
+    annotated in the browser with drawing, editing, magic-wand and erase
+    tools. Automatic tools estimate the seabed horizon by dynamic programming,
+    locate the bait arm from its shape and colour, and train a random-forest
+    pixel classifier on frames that have been reviewed. Projects can be shared
+    by several annotators, every edit is logged, and results export as one
+    row per frame.
+License: MIT + file LICENSE
+URL: https://github.com/BrookeGibbons/fov_annotator
+BugReports: https://github.com/BrookeGibbons/fov_annotator/issues
+Encoding: UTF-8
+Language: en-AU
+Depends:
+    R (>= 4.0.0)
+Imports:
+    bslib (>= 0.5.0),
+    jsonlite,
+    openssl,
+    shiny (>= 1.7.0),
+    tools,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2
